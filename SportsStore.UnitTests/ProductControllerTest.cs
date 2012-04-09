@@ -4,6 +4,8 @@ using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting.Web;
 using SportsStore.Domain.Abstract;
 using System.Web.Mvc;
+using SportsStore.WebUI.HtmlHelpers;
+using SportsStore.WebUI.Models;
 
 namespace SportsStore.UnitTests
 {
@@ -66,27 +68,25 @@ namespace SportsStore.UnitTests
         //
         #endregion
 
-
-        /// <summary>
-        ///A test for List
-        ///</summary>
-        // TODO: Ensure that the UrlToTest attribute specifies a URL to an ASP.NET page (for example,
-        // http://.../Default.aspx). This is necessary for the unit test to be executed on the web server,
-        // whether you are testing a page, web service, or a WCF service.
-        [TestMethod()]
-        [HostType("ASP.NET")]
-        [AspNetDevelopmentServerHost("C:\\CodeProj\\SportsStore\\SportsStore.WebUI", "/")]
-        [UrlToTest("http://localhost:49276/")]
-        public void ListTest()
+        [TestMethod]
+        public void Can_Generate_Page_Links()
         {
-            IProductRepository productRepository = null; // TODO: Initialize to an appropriate value
-            ProductController target = new ProductController(productRepository); // TODO: Initialize to an appropriate value
-            int page = 0; // TODO: Initialize to an appropriate value
-            ViewResult expected = null; // TODO: Initialize to an appropriate value
-            ViewResult actual;
-            actual = target.List(page);
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            HtmlHelper myHelper = null;
+
+            PagingInfo pagingInfo = new PagingInfo
+                                        {
+                                            CurrentPage = 2,
+                                            TotalItems = 28,
+                                            ItemsPerPage = 10
+                                        };
+            Func<int, string> pageUrlDelegate = i => "Page" + i;
+
+            MvcHtmlString result = myHelper.PageLinks(pagingInfo, pageUrlDelegate);
+
+            Assert.AreEqual(result.ToString(), @"<a href=""Page1"">1</a><a class=""selected"" href=""Page2"">2</a><a href=""Page3"">3</a>");
         }
+
+
+
     }
 }

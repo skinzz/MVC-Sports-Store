@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="6db1d445-63b9-43b7-b845-c8d99d1a3d25" name="skinzz@SKINZZBOOKPC 2012-04-08 17:02:36" runUser="SkinzzBookPC\skinzz" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="dc2b75c1-5252-4ea1-800c-2f39e353310a">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="skinzz_SKINZZBOOKPC 2012-04-08 17_02_36">
+      <DeploymentItem filename="C:\CodeProj\SportsStore\SportsStore\packages\Moq.4.0.10827\lib\NET40\Moq.dll" />
+      <DeploymentItem filename="C:\CodeProj\SportsStore\SportsStore\packages\EntityFramework.4.3.1\lib\net40\EntityFramework.dll" />
+      <DeploymentItem filename="C:\CodeProj\SportsStore\SportsStore\packages\Ninject.3.0.0.15\lib\net40\Ninject.dll" />
+      <DeploymentItem filename="C:\CodeProj\SportsStore\SportsStore.Domain\bin\Debug\SportsStore.Domain.dll" />
+      <DeploymentItem filename="C:\CodeProj\SportsStore\SportsStore.WebUI\bin\SportsStore.WebUI.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-04-08T17:02:36.9548000-04:00" queuing="2012-04-08T17:02:37.1698000-04:00" start="2012-04-08T17:02:37.2518000-04:00" finish="2012-04-08T17:02:37.6508000-04:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="1" executed="1" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="ListTest" storage="c:\codeproj\sportsstore\sportsstore.unittests\bin\debug\sportsstore.unittests.dll" id="85edf1fd-3b1d-eab7-cf4b-1517b5a5e513">
+      <Execution id="d810015a-34fb-4977-ba17-89336fa4c1b1" />
+      <TestMethod codeBase="C:/CodeProj/SportsStore/SportsStore.UnitTests/bin/Debug/SportsStore.UnitTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="SportsStore.UnitTests.ProductControllerTest, SportsStore.UnitTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ListTest" />
+      <AspNet webSiteUrl="http://localhost:49276/">
+        <Host pathToWebApp="C:\CodeProj\SportsStore\SportsStore.WebUI" webAppRoot="/" />
+      </AspNet>
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="85edf1fd-3b1d-eab7-cf4b-1517b5a5e513" executionId="d810015a-34fb-4977-ba17-89336fa4c1b1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="d810015a-34fb-4977-ba17-89336fa4c1b1" testId="85edf1fd-3b1d-eab7-cf4b-1517b5a5e513" testName="ListTest" computerName="SKINZZBOOKPC" startTime="2012-04-08T17:02:37.3968000-04:00" endTime="2012-04-08T17:02:37.6328000-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d810015a-34fb-4977-ba17-89336fa4c1b1">
+      <Output>
+        <ErrorInfo>
+          <Message>The ASP.NET Web application at 'C:\CodeProj\SportsStore\SportsStore.WebUI' is already configured for testing by another test run. Only one test run at a time can run tests in ASP.NET. If there are no other test runs using this Web application, ensure that the Web.config file does not contain an httpModule named HostAdapter.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>
