@@ -4,22 +4,28 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using SportsStore.Domain.Abstract;
+using SportsStore.WebUI.Infrastructure.Logging;
 using SportsStore.WebUI.Models;
 
 namespace SportsStore.WebUI.Controllers
 {
     public class ProductController : Controller
     {
+       
         public int PageSize = 4; 
         private IProductRepository repository;
+        private ILogger _logger;
 
-        public ProductController(IProductRepository productRepository)
+        public ProductController(IProductRepository productRepository, ILogger logger)
         {
             repository = productRepository;
+            _logger = logger;
         }
 
         public ViewResult List(int page = 1)
         {
+            _logger.LogInfo("Logging from the List Controller!!");
+
             var viewModel = new ProductsListViewModel
                                                   {
                                                       Products = repository.Products

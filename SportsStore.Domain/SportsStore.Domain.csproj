@@ -34,6 +34,9 @@
     <Reference Include="EntityFramework">
       <HintPath>..\SportsStore\packages\EntityFramework.4.3.1\lib\net40\EntityFramework.dll</HintPath>
     </Reference>
+    <Reference Include="NLog">
+      <HintPath>..\SportsStore\packages\NLog.2.0.0.2000\lib\net40\NLog.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
